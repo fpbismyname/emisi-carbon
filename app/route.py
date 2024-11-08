@@ -1,10 +1,22 @@
-from flask import Flask
+def Routes(app):
+    app = app
+    
+    """
 
-def create_app():
-    app = Flask(__name__)
+        #Routes
+
+        Example Routes
+        @app.route("/")
+        def index():
+            return "Home"
+            
+    """
     
+    # Routes here
+    @app.route("/")
+    def index():
+        return "index"
+    
+    @app.route("/home")
     def home():
-        return "Homa"
-    
-    app.add_url_rule("/", "home", home)
-    return app
+        return "home"
