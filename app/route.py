@@ -14,4 +14,4 @@ class route:
         
         @app.route('/', methods=['GET'])
         def index():
-            return "Kumalala"
+            return "Testing done"
