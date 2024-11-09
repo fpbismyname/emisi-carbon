@@ -1,22 +1,17 @@
-def Routes(app):
-    app = app
+# Import controller
+from app.controllers.userController import userController
+
+# Routes
+class route:
+    def __init__(self, flaskApp) -> None:
+        # register flaskapp
+        self.app = flaskApp
+        #register controller
+        self.userController = userController
     
-    """
-
-        #Routes
-
-        Example Routes
-        @app.route("/")
+    def routes(self):
+        app = self.app
+        
+        @app.route('/', methods=['GET'])
         def index():
-            return "Home"
-            
-    """
-    
-    # Routes here
-    @app.route("/")
-    def index():
-        return "index"
-    
-    @app.route("/home")
-    def home():
-        return "home"
+            return self.userController.getUsers(username="Fajar", password="Kumalala")
