@@ -14,4 +14,4 @@ class route:
         
         @app.route('/', methods=['GET'])
         def index():
-            return self.userController.getUsers(username="Fajar", password="Kumalala")
+            return "Kumalala"
