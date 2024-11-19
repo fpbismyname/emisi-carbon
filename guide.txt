@@ -1,0 +1,4 @@
+# Running apps with debug mode
+flask --app run --debug run
+# Running apps without debug mode
+flask --app run run
