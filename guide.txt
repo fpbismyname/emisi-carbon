@@ -2,3 +2,5 @@
 flask --app run --debug run
 # Running apps without debug mode
 flask --app run run
+# Commit to git 
+git add .; git commit -m "Update x.x.x"; git push -u origin main; git log -1 --pretty=%B >> app_update.txt
